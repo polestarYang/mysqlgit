@@ -35,7 +35,6 @@ date >> $record_log/$log_name
 echo "--------------------Full Backup Ended------------------"  >> $record_log/$log_name
 
 ###############   delete the physical_images and metadata_infor from 7 days ago  #############
- 
 images_dir=/mysqldata/backup/back_images
 find $images_dir -type f -name "physical_fullback_*.mbi" -mtime +7 -exec rm -rf {} \;
 
