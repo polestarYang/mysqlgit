@@ -18,8 +18,7 @@ echo "--------------------Full Backup Starting------------------"  >> $backup_di
 date >> $backup_dir/$backup_log
 
 /mysqlsoft/mysql/bin/mysqldump -u root -pAirchina_869 --single-transaction --master-data=2 --all-databases \
--E -R --triggers --set-gtid-purged=off --socket=/tmp/mysql.sock \
-> $backup_dir/logigal_fullDB_`date '+%m-%d-%Y'`.sql
+-E -R --triggers --set-gtid-purged=off --socket=/tmp/mysql.sock > $backup_dir/logigal_fullDB_`date '+%m-%d-%Y'`.sql
 
 echo "--------------------Full Backup Ended------------------"  >> $backup_dir/$backup_log
 date >> $backup_dir/$backup_log
