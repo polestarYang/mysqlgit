@@ -10,11 +10,11 @@
 
 # wanna to rename database ethandb to ts_db_01;
 
-mysql -uroot -pmysql -h 10.10.178.112 -P 3308 -e 'create database if not exists ts_db_02'
-list_table=$(mysql -uroot -pmysql -h 10.10.178.112 -P 3308 -Nse "select table_name from information_schema.TABLES \
+mysql -uroot -pmysql -h 192.168.0.112 -P 3308 -e 'create database if not exists ts_db_02'
+list_table=$(mysql -uroot -pmysql -h 192.168.0.112 -P 3308 -Nse "select table_name from information_schema.TABLES \
 where TABLE_SCHEMA='ts_db_01'")
 
 for table in $list_table
 do
-    mysql -uroot -pmysql -h 10.10.178.112 -P 3308 -e "rename table ts_db_01.$table to ts_db_02.$table"
+    mysql -uroot -pmysql -h 192.168.0.112 -P 3308 -e "rename table ts_db_01.$table to ts_db_02.$table"
 done
