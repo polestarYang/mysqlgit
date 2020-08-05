@@ -2,7 +2,7 @@
 # $Name: xtrabackup_mysql_20200805.sh
 # $Version: v1.0
 # $Author: Ethan_Yang
-# $Create Date: 2020-06-28
+# $Create Date: 2020-08-05
 # $Description: Using xtrabackup script to backup MySQL physically in full and incre format 
 #######################################################
 
